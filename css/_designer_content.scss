@@ -1,0 +1,425 @@
+.characters_request {
+    display: none;                                 // здесь --- КНОПКА ЗАЯВКИ
+    position: absolute;
+    background: #D9793E;
+    transform: rotate(90deg);
+    right: -64px;
+    top: 50%;
+    padding: 9px 17px;
+    border-radius: 0 0 5px 5px;
+    cursor: pointer;
+    & p {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 100%;
+        color: #FFFFFF;
+    }
+}
+
+.characters {
+    margin-top: 47px;
+    display: none;
+    // display: flex;                                                 // здесь --- ВЕСЬ БЛОК
+    @media (min-width: 1710px) {
+        margin-top: 52px;
+    }
+    @media (max-width: 1024px) {
+        flex-direction: column-reverse;
+        margin-left: 47px;
+    }
+    .characters_sound-control {
+        display: flex;
+        width: 148px;
+        height: 520px;
+        align-items: flex-end;
+        @media (min-width: 1710px) {
+            width: 144px;
+            height: 675px;
+            position: absolute;
+            top: 276px;
+        }
+        @media (max-width: 1024px) {
+            position: absolute;
+            top: 208px;
+            left: 55px;
+        }
+        .characters_sound-cursor {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin-left: 35px;
+            @media (max-width: 1024px) {
+                position: fixed;
+                z-index: 20;
+            }
+            & img {
+                width: 11px;
+                height: 11px;
+                margin-right: 10px;
+                @media (min-width: 1710px) {
+                    width: 13px;
+                    height: 13px;
+                }
+                @media (max-width: 1024px) {
+                    color: #cccccc;
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+            & p {
+                font-family: 'DrukTextWide';
+                font-weight: 500;
+                font-size: 9px;
+                line-height: 10px;
+                color: #454545;
+                margin-bottom: -4px;
+                @media (min-width: 1710px) {
+                    font-size: 12px;
+                    margin-right: 10px;
+                }
+                @media (max-width: 1024px) {
+                    color: #cccccc;
+                    width: 85px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .characters_content {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        color: #454545;
+        @media (min-width: 1710px) {
+            width: 576px;
+        }
+        .characters_header-top {
+            font-family: 'DrukTextWide';
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 100%;
+            overflow: hidden;
+            @media (min-width: 1710px) {
+                font-size: 48px;
+                width: 456px;
+            }
+            @media (max-width: 1024px) {
+                font-size: 41px;
+            }
+            .characters_header-top_designer {
+                display: none;                                  // здесь --- ПЕРЕКЛЮЧЕНИЕ ЗАГОЛОВКА ПЕРСОНАЖЕЙ
+            }
+            .characters_header-top_engineer {
+                display: none;                                  // здесь
+            }
+            .characters_header-top_top-manager {
+                display: none;                                 // здесь
+            }
+        }
+        .characters_text {
+            margin-top: 26px;
+            width: 510px;
+            font-family: 'Montserrat';
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 150%;
+            overflow: hidden;
+            @media (min-width: 1710px) {
+                width: 674px;
+                margin-top: 29px;
+                font-size: 16px;
+            }
+            @media (max-width: 1024px) {
+                margin-top: 32px;
+            }
+            .characters_text_designer {
+                display: none;                                // здесь --- ПЕРЕКЛЮЧЕНИЕ ТЕКСТА ПЕРСОНАЖЕЙ
+            }
+            .characters_text_engineer {
+                display: none;                                // здесь
+            }
+            .characters_text_top-manager {
+                display: none;                               // здесь
+            }
+        }
+        .characters_more-info {
+            display: flex;
+            align-items: center;
+            width: 374px;
+            height: 41px;
+            margin: 38px 0 36px 0;
+            overflow: hidden;
+            @media (min-width: 1710px) {
+                padding: 41px 0 41px 0;
+            }
+            @media (max-width: 1024px) {
+                margin: 30px 0 49px 0;
+            }
+            .characters_more-info_btn {
+                margin-right: 48px;
+                font-family: 'DrukTextWide';
+                font-weight: 500;
+                font-size: 8px;
+                line-height: 15px;
+                color: #FFFFFF;
+                background: #D9793E;
+                padding: 13.5px 48px;
+                cursor: pointer;
+                display: none;
+                @media (min-width: 1710px) {
+                    font-size: 12px;
+                    padding: 16.5px 30px;
+                }
+                @media (max-width: 1024px) {
+                    margin-right: 28px;
+                }
+            }
+            .characters_well-types {
+                padding: 13px 0;
+                display: flex;
+                font-family: 'Montserrat';
+                font-weight: 500;
+                font-size: 10px;
+                line-height: 130%;
+                color: #454545;
+                @media (min-width: 1710px) {
+                    padding: 15px 0;
+                    font-size: 12px;
+                }
+                .characters_line-border {
+                    width: 1px;
+                    height: 32px;
+                    background-color: #BCBCBC;
+                    margin-left: 25px;
+                    margin-right: 25px;
+                    display: none;
+                    @media (min-width: 1710px) {
+                        height: 40px;
+                    }
+                    @media (max-width: 1024px) {
+                        margin-left: 20px;
+                        margin-right: 20px;
+                    }
+                }
+                .characters_well-types_designer {
+                    display: none;                                           // здесь --- ПЕРЕКЛЮЧЕНИЕ СПОСОБОВ БУРЕНИЯ К ПЕРСОНАЖАМ
+                }
+                .characters_well-types_designer-item {
+                    display: none;
+                }
+                .characters_well-types_engineer {
+                    display: none;
+                }
+                .characters_well-types_engineer-item {
+                    display: none;
+                }
+                .characters_well-types_top-manager {
+                    display: none;
+                }
+                .characters_well-types_top-manager-item {
+                    display: none;
+                }
+            }
+        }
+    }
+    .characters_person-images {
+        position: absolute;
+        width: 35%;
+        height: 635px;
+        right: 190px;
+        bottom: 0;
+        height: 600px;
+        display: flex;
+        justify-content: flex-end;
+        @media (min-width: 1710px) {
+            height: 700px;
+            right: -300px;
+        }
+        .characters_person-images_wrapper {
+            display: flex;
+            height: inherit;
+            position: relative;
+            width: 548px;
+            .characters_speech {
+                display: none;                              // здесь --- ДИАЛОГОВОЕ ОКНО
+                width: auto;
+                height: auto;
+                background: #f0f0f0;
+                border-radius: 5px;
+                position: absolute;
+                right: 333px;
+                bottom: 449px;
+                padding: 20px 44px 20px 24px;
+                @media (min-width: 1710px) {
+                    right: 944px;
+                    bottom: 595px;
+                }
+                .characters_speech-wrapper {
+                    position: relative;
+                    font-family: 'Montserrat';
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 150%;
+                    text-transform: uppercase;
+                    .designer_speech {
+                        display: none;                       // здесь --- СЛОВА ПЕРСОНАЖЕЙ
+                        color: #454545;
+                        width: 252px;
+                    }
+                    .engineer_speech {
+                        display: none;                          // здесь
+                        color: #454545;
+                        width: 252px;
+                    }
+                    .top-manager_speech {
+                        display: none;                          // здесь
+                        color: #454545;
+                        width: 252px;
+                    }
+                    .characters_speech-tail {
+                        position: absolute;
+                        width: 24px;
+                        height: 24px;
+                        background-color: #f0f0f0;
+                        right: 0;
+                        bottom: -44px;
+                        background: linear-gradient(to left bottom, #f0f0f0 50%, transparent 50%) left/100% 100% no-repeat;
+                    }
+                }
+            }
+            & img {
+                position: absolute;
+                height: 635px;
+                object-fit: cover;
+                bottom: 0;
+                @media (min-width: 1710px) {
+                    min-height: 780px;
+                }
+            }
+            .designer2 {
+                display: none;
+                height: 615px;                           // здесь --- КАРТИНКИ ПЕРСОНАЖЕЙ
+                z-index: 1;
+                right: 0;
+                @media (min-width: 1710px) {
+                    height: 700px;
+                    right: 502px;
+                }
+                @media (max-width: 1024px) {
+                    right: -178px;
+                }
+            }
+            .engineer2 {
+                display: none;                           // здесь
+                z-index: 1;
+                right: 0;
+                @media (min-width: 1710px) {
+                    min-height: 820px;
+                    right: 502px;
+                }
+                @media (max-width: 1024px) {
+                    height: 650px;
+                    right: -170px;
+                }
+            }
+            .top-manager2 {
+                display: none;                           // здесь
+                z-index: 1;
+                right: 0;
+                @media (min-width: 1710px) {
+                    min-height: 820px;
+                    right: 502px;
+                }
+                @media (max-width: 1024px) {
+                    height: 650px;
+                    right: -190px;
+                }
+            }
+            &:hover {
+                .characters_speech {
+                    display: block;
+                    @media (max-width: 1024px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .characters_mouse-language {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        right: 0;
+        bottom: 53px;
+        @media (max-width: 1024px) {
+            z-index: 20;
+        }
+        & img {
+            margin-bottom: 40px;
+            @media (max-width: 1024px) {
+                display: none;
+            }
+        }
+        & p {
+            font-family: 'DrukTextWide';
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            text-decoration-line: underline;
+            color: #454545;
+            cursor: pointer;
+            @media (max-width: 1024px) {
+                color: #ffffff;
+                margin-right: 50px;
+                margin-bottom: -18px;
+            }
+        }
+    }
+    .characters_video {
+        position: absolute;
+        bottom: 0;
+        right: 153px;
+        height: 220px;
+        width: 1100px;
+        overflow: hidden;
+        @media (min-width: 1710px) {
+            width: 1430px;
+            right: 157px;
+        }
+        @media (max-width: 1024px) {
+            right: 0;
+            left: 0;
+        }
+        .characters_video-wrapper {
+            position: relative;
+            & video {
+                position: absolute;
+            }
+            .designer_video-back {
+                display: none;                         // здесь --- ВИДЕО ФОН ПЕРСНАЖЕЙ
+                width: 76vw;
+                top: -70px;
+                @media (max-width: 1024px) {
+                    width: 100vw;
+                }
+            }
+            .engineer_video-back {
+                display: none;                        // здесь 
+                width: 76vw;
+                top: -200px;
+                @media (max-width: 1024px) {
+                    width: 100vw;
+                }
+            }
+            .top-manager_video-back {
+                display: none;                          // здесь
+                top: -149px;
+                width: 76vw;
+                @media (max-width: 1024px) {
+                    width: 100vw;
+                }
+            }
+        }
+    }
+}
